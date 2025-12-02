@@ -1,5 +1,6 @@
 const templates = ["template1.png", "template2.png"];
 const example = ["template1.png", "template2.png"];
+const templateTitles = ["Vintage Film", "Retro Wave"];
 let currentIndex = 0;
 let selectedTemplate = templates[0];
 
@@ -10,6 +11,7 @@ const prevBtn = document.getElementById("prevBtn");
 const nextBtn = document.getElementById("nextBtn");
 const useTemplateBtn = document.getElementById("useTemplateBtn");
 const exampleStack = document.getElementById("exampleStack");
+const backBtn = document.getElementById("backBtn");
 
 const cameraVideo = document.getElementById("camera");
 const currentTemplateName = document.getElementById("currentTemplateName");
@@ -57,10 +59,15 @@ showCarousel(0);
 useTemplateBtn.onclick = async () => {
   stageTemplate.classList.add("hidden");
   stageCamera.classList.remove("hidden");
-  currentTemplateName.innerText = templates[currentIndex];
+  currentTemplateName.innerText = templateTitles[currentIndex];
   await startCamera();
   startSSE(); 
 };
+
+backBtn.onclick = () => {
+  stageCamera.classList.add("hidden");
+  stageTemplate.classList.remove("hidden");
+}
 
 async function startCamera(){
   try {
@@ -86,6 +93,9 @@ function flashScreen(duration = 160) {
   void shutterFlashEl.offsetWidth;
   setTimeout(() => {
     shutterFlashEl.style.opacity = "0";
+    const shutter = document.getElementById("shutterFlash");
+    shutter.remove();
+    shutterFlashEl = null;
   }, 30);
 }
 
@@ -247,8 +257,8 @@ function addSavedItem(publicPath, filename, dateFolder){
   del.textContent = "Hapus";
   del.style.marginLeft="auto";
   del.onclick = async ()=>{
-    if(confirm("Hapus file dari disk? (Fitur tidak di-enable di versi ini)")) {
-      alert("Fitur hapus file otomatis belum diaktifkan. Kamu bisa hapus manual di folder Pictures/Photobox.");
+    if(confirm("Hapus file dari disk?")) {
+      // INI GIMANA ANJAY GABISA NGEHAPUS FOTO GEUNINGGG???
     }
   };
 

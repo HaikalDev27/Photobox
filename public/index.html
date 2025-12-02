@@ -7,8 +7,9 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <h1 class="navTitle">SNAP || Capture the Moment, Create the Story</h1>
   <div id="stage-template" class="stage">
-    <h1 class="title">Pilih Template</h1>
+    <h1 class="title">Silahkan Pilih Template</h1>
 
     <div class="carousel">
       <button id="prevBtn" class="nav-btn">◀</button>
@@ -30,15 +31,17 @@
   </div>
 
   <div id="stage-camera" class="stage hidden">
-    <h1 class="title">Siap Memotret — Template: <span id="currentTemplateName">template1.png</span></h1>
-
+    <h1 class="title">Siap Memotret Template: <span id="currentTemplateName">template1.png</span></h1>
     <div class="live-row">
       <video id="camera" autoplay playsinline></video>
       <div class="side-panel">
         <div class="controls">
           <label>Shots: <strong>3</strong></label>
           <label>Resolution: <strong>1280×720</strong></label>
-          <button id="captureBtn" class="big">Mulai Pemotretan</button>
+          <div class="gridButton">
+            <button id="captureBtn" class="big">Mulai Pemotretan</button>
+            <button id="backBtn" class="primary">Kembali Pilih Template</button>
+          </div>
         </div>
 
         <div class="gallery">
@@ -61,7 +64,9 @@
       </div>
     </div>
   </div>
-
+  <footer style="text-align:center; padding:10px; font-size:14px; color:#666;">
+    &copy; 2025 Multimedia SCADA - All rights reserved.
+  </footer>
   <script src="app.js"></script>
 </body>
 </html>
