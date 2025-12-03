@@ -13,6 +13,8 @@ const useTemplateBtn = document.getElementById("useTemplateBtn");
 const exampleStack = document.getElementById("exampleStack");
 const backBtn = document.getElementById("backBtn");
 const mirroredBtn = document.getElementById("mirrored");
+const startBtn = document.getElementById("startBtn");
+const Timer = document.getElementById("fiveMinTimer");
 
 const cameraVideo = document.getElementById("camera");
 const currentTemplateName = document.getElementById("currentTemplateName");
@@ -25,6 +27,13 @@ const saveBtn = document.getElementById("saveBtn");
 const retakeBtn = document.getElementById("retakeBtn");
 
 const savedList = document.getElementById("savedList");
+
+startBtn.onclick = () => {
+  document.querySelector(".main-menu").classList.add("hidden");
+  stageTemplate.classList.remove("hidden");
+  Timer.classList.remove("hidden");
+  startTimer(300, true);
+};
 
 function showCarousel(i){
   currentIndex = (i + templates.length) % templates.length;
@@ -294,4 +303,40 @@ function addSavedItem(publicPath, filename, dateFolder){
 async function loadInitialSaved(){
 
 }
+
 loadInitialSaved();
+
+let TimeInterval = null;
+let TimeRemaining = 300;
+
+function formatTime(seconds){
+  const m = Math.floor(seconds / 60);
+  const s = seconds % 60;
+  return String(m).padStart(2,'0') + ":" + String(s).padStart(2,'0');
+}
+
+function stopFiveMinuteTimer(){
+  if(TimeInterval){
+    clearInterval(TimeInterval);
+    TimeInterval = null;
+  }
+}
+
+function startTimer(durationSec = 300, showAlert = true){
+  stopFiveMinuteTimer();
+  TimeRemaining = durationSec;
+  const el = document.getElementById("fiveMinTimer");
+  if(el) el.textContent = formatTime(TimeRemaining);
+
+  TimeInterval = setInterval(()=>{
+    TimeRemaining--;
+    if(el) el.textContent = formatTime(TimeRemaining);
+    if(TimeRemaining <= 0){
+      stopFiveMinuteTimer();
+      if(showAlert) alert("Waktu 5 menit telah habis");
+      setTimeout(()=> {
+        return window.location.reload();
+      }, 5000);
+    }
+  }, 1000);
+}
