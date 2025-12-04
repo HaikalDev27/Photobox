@@ -27,7 +27,6 @@ body{
 
 .logo{
   /* width:240px; */
-  animation: shake 2s infinite ease-in-out;
 }
 
 #startBtn{
@@ -39,6 +38,7 @@ body{
   border:none;
   border-radius:10px;
   cursor:pointer;
+  animation: shake 2s infinite ease-in-out;
 }
 
 @keyframes shake {
