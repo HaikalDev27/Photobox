@@ -1,0 +1,346 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #000000;
+  color: #FFFFFF;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  color: #FFFFFF;
+  margin-top: 0;
+  font-family: 'Poppins', sans-serif;
+  align-items: center;
+}
+
+a {
+  color: #FFFFFF;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover {
+  color: #A8B5A0;
+}
+
+/* ===========================
+   TOGGLE MENU (Mobile Only)
+   =========================== */
+.nav-toggle {
+  display: none;
+}
+
+.nav-toggle-label {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.nav-toggle-label span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  margin: 6px 0;
+  background-color: #FFFFFF;
+  transition: 0.3s;
+}
+
+.nav-toggle:checked ~ .nav-toggle-label span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.nav-toggle:checked ~ .nav-toggle-label span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-toggle:checked ~ .nav-toggle-label span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* ===========================
+   NAVBAR MOBILE
+   =========================== */
+nav {
+  background-color: #A8B5A0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 250px;
+  height: 100vh;
+  padding: 1rem;
+  transform: translateX(100%);
+  transition: 0.3s;
+  z-index: 50;
+  overflow-y: auto;
+}
+
+.nav-toggle:checked ~ nav {
+  transform: translateX(0);
+}
+
+/* LOGO DESKTOP */
+.navbar-logo {
+  position: fixed;
+  top: 1rem;
+  right: 4rem;
+  font-size: 25px;
+  font-weight: bold;
+  color: #FFFFFF;
+  z-index: 90;
+}
+
+/* LOGO MOBILE */
+.nav-logo-mobile {
+  display: none;
+  font-size: 50px;
+  font-weight: bold;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 500px;
+  padding-bottom: 100px;
+}
+
+/* NAV LIST */
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+nav li {
+  margin: 1rem 0;
+}
+
+nav a {
+  font-weight: bold;
+  color: #FFFFFF;
+}
+
+nav a:hover {
+  color: #000000;
+}
+
+/* HERO SECTION */
+.hero {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.hero .logo img {
+  max-width: 120px;
+  border-radius: 6px;
+}
+
+.hero h1 {
+  font-size: 2rem;
+  margin: 1rem 0;
+}
+
+/* BUTTON */
+.btn-pesan {
+  display: inline-block;
+  margin-top: 1.5rem;
+  background: #A8B5A0;
+  color: #000;
+  padding: 0.8rem 1.6rem;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-pesan:hover {
+  background: #8FA085;
+  transform: scale(1.05);
+}
+
+/* CONTENT AREA */
+section {
+  padding: 2rem 1rem;
+  max-width: 1100px;
+  margin: auto;
+}
+
+
+/* ============================
+   FORM WRAPPER
+============================ */
+#pemesanan {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+#pemesanan h2 {
+  font-size: 1.9rem;
+  margin-bottom: 20px;
+  color: #e5e5e5;
+  letter-spacing: 1px;
+}
+
+/* ============================
+   FORM CONTAINER (Glass Style)
+============================ */
+form {
+  max-width: 550px;
+  margin: 20px auto;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+}
+
+/* ============================
+   FIELD BLOCK (Lebih Rapi)
+============================ */
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 1.6rem;
+}
+
+/* ============================
+   LABEL
+============================ */
+label {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #f1f1f1;
+  letter-spacing: 0.4px;
+}
+
+/* ============================
+   INPUT & SELECT (Tinggi Sama)
+============================ */
+input[type="text"],
+select {
+  width: 100%;
+  height: 50px;                 /* ⬅ Samakan tinggi */
+  padding: 0 1rem;              /* ⬅ Padding kiri kanan */
+  border: none;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  backdrop-filter: blur(4px);
+  transition: 0.25s ease;
+}
+
+/* Hilangkan border default pada select */
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  background-image: url("data:image/svg+xml,%3Csvg fill='white' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+}
+
+/* ============================
+   FOCUS EFFECT
+============================ */
+input:focus,
+select:focus {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.25);
+  transform: translateY(-2px);
+  outline: none;
+}
+
+/* ============================
+   BUTTON (Tetap Modern)
+============================ */
+.button button {
+  width: 100%;
+  height: 52px;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  background: linear-gradient(135deg, #9cd38f, #7cbf69);
+  color: #111;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.button button:hover {
+  background: linear-gradient(135deg, #aee9a1, #8edc7f);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(140, 220, 127, 0.35);
+}
+
+.button button:active {
+  transform: translateY(0);
+}
+
+
+/* 
+   RESPONSIVE MOBILE
+ */
+@media (max-width: 768px) {
+  .navbar-logo {
+    display: none;
+  }
+
+  .nav-logo-mobile {
+    display: block;
+  }
+}
+
+/* 
+   RESPONSIVE DESKTOP
+*/
+@media (min-width: 769px) {
+
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    padding: 5px;
+    transform: none;
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: flex-start;
+    gap: 2rem;
+    padding-left: 2rem;
+  }
+
+  .nav-logo-mobile {
+    display: none;
+  }
+
+  .nav-toggle-label {
+    display: none;
+  }
+
+  .nav-toggle {
+    display: none !important;
+  }
+
+  body {
+    padding-top: 75px;
+  }
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  background-color: #A8B5A0;
+  color: #000000;
+  padding: 1rem;
+  margin-top: 2rem;
+}

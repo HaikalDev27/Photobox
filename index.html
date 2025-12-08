@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SnapScada</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header id="home">
+
+    <!-- TOGGLE NAV (MOBILE) -->
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <label for="nav-toggle" class="nav-toggle-label">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+
+    <!-- LOGO UNTUK DESKTOP -->
+    <div class="navbar-logo">Snap</div>
+
+    <nav>
+      <ul class="nav-list">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#alur">Alur</a></li>
+        <li><a href="#pemesanan">Pemesanan</a></li>
+      </ul>
+
+      <!-- LOGO MOBILE DI PALING BAWAH NAVBAR -->
+      <div class="nav-logo-mobile">Snap</div>
+    </nav>
+
+    <!-- section home -->
+    <div class="hero">
+      <div class="logo">
+        <img src="https://via.placeholder.com/120x120.png?text=Logo" alt="Logo FotoBooth School">
+      </div>
+
+      <h1>Selamat Datang di FotoBooth kami</h1>
+      <p>Layanan foto booth portable untuk acara sekolah — cepat, rapi, dan berkesan.</p>
+      <p class="app-name">Aplikasi: <strong>FotoBooth Ticketing</strong></p>
+
+      <a href="#pemesanan" class="btn-pesan">Pesan Tiket Sekarang</a>
+    </div>
+
+  </header>
+
+  <main>
+    
+    <!-- SECTION ABOUT — SUDAH DIUBAH -->
+    <section id="about">
+      <h2>Tentang SNAP</h2>
+
+      <p><strong><em>SNAP – “Capture the Moment, Create the Story”</em></strong><br>
+      <em>By Multimedia Scada</em></p>
+
+      <p>
+       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+      </p>
+
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+      </p>
+    </section>
+
+    <!-- SECTION ALUR — SUDAH DIUBAH -->
+    <section id="alur">
+      <h2>Alur Layanan SNAP (Operational Workflow)</h2>
+
+      <ol>
+        <li><strong>Pemesanan Sesi (Booking):</strong>
+          Pengunjung melakukan pemesanan 1 sesi foto berdurasi ±5 menit dengan tarif yang telah ditetapkan.
+        </li>
+
+        <li><strong>Tiket Masuk Photobox:</strong>
+          Pengunjung menerima tiket atau kode sesi sebagai akses masuk area photobox.
+        </li>
+
+        <li><strong>Pemilihan Template / Overlay:</strong>
+          Pengunjung memilih template foto melalui aplikasi sebelum sesi dimulai.
+        </li>
+
+        <li><strong>Pengambilan Foto:</strong>
+          Pengunjung bebas mengambil foto sebanyak yang diinginkan selama durasi masih tersedia.
+        </li>
+
+        <li><strong>Review & Manajemen Foto:</strong>
+          Pengunjung dapat meninjau hasil foto, menyimpan, atau menghapus yang tidak diinginkan.
+        </li>
+
+        <li><strong>Distribusi Hasil:</strong>
+          Pengunjung dapat memilih:
+          <ul>
+            <li>Digital delivery (email/WhatsApp/QR download)</li>
+            <li>Instant print (cetak langsung, biaya tambahan)</li>
+          </ul>
+        </li>
+
+        <li><strong>Penggunaan Properti / Atribut:</strong>
+          Pengunjung boleh menggunakan properti yang disediakan atau membawa properti pribadi.
+        </li>
+      </ol>
+    </section>
+
+   <!-- SECTION PEMESANAN -->
+<section id="pemesanan">
+  <h2>Pemesanan Tiket</h2>
+
+  <form id="form-pemesanan" action="#" method="post" autocomplete="off">
+
+    <div class="field">
+  <label for="nama">Nama Lengkap</label>
+  <input type="text" id="nama" name="nama" required>
+</div>
+
+<div class="field">
+  <label for="jenis_tiket">Jenis Tiket</label>
+  <select id="jenis_tiket" name="jenis_tiket" required>
+    <option value="single">Single (1 orang)</option>
+    <option value="couple">Couple (2 orang)</option>
+    <option value="cirkel">Cirkel (maks 4 orang)</option>
+    <option value="group">Group (maks 6 orang)</option>
+  </select>
+</div>
+
+    <div class="button">
+      <button type="submit">Pesan Tiket</button>
+    </div>
+
+  </form>
+</section>
+
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 FotoBooth School Co. Semua hak dilindungi.</p>
+  </footer>
+
+</body>
+</html>
