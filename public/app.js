@@ -39,13 +39,15 @@ startBtn.onclick = () => {
 function showCarousel(i){
   currentIndex = (i + templates.length) % templates.length;
   carouselImg.src = "example/" + example[currentIndex];
-  previous.src = "templates/" + templates[(currentIndex - 1 + templates.length) % templates.length];
-  next.src = "templates/" + templates[(currentIndex + 1) % templates.length];
+  previous.src = "example/" + templates[(currentIndex - 1 + templates.length) % templates.length];
+  next.src = "example/" + templates[(currentIndex + 1) % templates.length];
   selectedTemplate = "templates/" + templates[currentIndex];
   renderExampleUsage(selectedTemplate);
 }
 prevBtn.onclick = ()=> showCarousel(currentIndex-1);
+previous.onclick = ()=> showCarousel(currentIndex-1);
 nextBtn.onclick = ()=> showCarousel(currentIndex+1);
+next.onclick = ()=> showCarousel(currentIndex+1);
 
 function renderExampleUsage(templatePath){
   exampleStack.innerHTML = "";
