@@ -1,116 +1,95 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Snap</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SNAP — Scada photobooth</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <header id="home">
+  <img src="./image/template (5).png" alt="" class="floating-image1"/>
+  <img src="./image/template (6).png" alt="" class="floating-image2"/>
 
-    <!-- TOGGLE NAV (MOBILE) -->
-    <input type="checkbox" id="nav-toggle" class="nav-toggle">
-    <label for="nav-toggle" class="nav-toggle-label">
-      <span></span>
-      <span></span>
-      <span></span>
-    </label>
-
-    <!-- LOGO UNTUK DESKTOP -->
-    <div class="navbar-logo">Snap</div>
-
+  <header class="nav">
+    <div class="logo">SNAP</div>
     <nav>
-      <ul class="nav-list">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#alur">Alur</a></li>
-        <li><a href="#pemesanan">Pemesanan</a></li>
-      </ul>
-
-      <div class="nav-logo-mobile">Snap</div>
+      <button id="open-booking" class="btn primary">Booking Sekarang</button>
     </nav>
-
-    <!-- section home -->
-    <div class="hero">
-      <div class="logo">
-        <img src="https://via.placeholder.com/120x120.png?text=Logo" alt="Logo FotoBooth School">
-      </div>
-
-      <h1>Selamat Datang di FotoBooth kami</h1>
-      <p>Layanan foto booth portable untuk acara sekolah — cepat, rapi, dan berkesan.</p>
-      <p class="app-name">Aplikasi: <strong>FotoBooth Ticketing</strong></p>
-
-      <a href="#pemesanan" class="btn-pesan">Pesan Tiket Sekarang</a>
-    </div>
-
   </header>
 
   <main>
-    
-    <section id="about">
-      <h2>Tentang SNAP</h2>
-
-      <p><strong><em>SNAP – “Capture the Moment, Create the Story”</em></strong><br>
-      <em>By Multimedia Scada</em></p>
-
-      <p>
-       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      </p>
-
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      </p>
+    <section class="hero">
+      <div class="hero-left">
+        <h1 id="hero-title">Snap by Multimedia Scada</h1>
+        <p class="lead">"Capture the moment, Create the Story".</p>
+        <div class="cta-row">
+          <button id="cta-book" class="btn primary">Pesan Sekarang</button>
+          <a href="#packages" class="btn outline">Lihat Paket</a>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div id="carousel" class="carousel">
+          <!-- gambar diisi via JS -->
+        </div>
+      </div>
     </section>
 
-    <section id="alur">
-      <h2>Alur Layanan SNAP (Operational Workflow)</h2>
-
-      <ol>
-        <li><strong>Pemesanan Sesi (Booking):</strong> Pengunjung melakukan pemesanan 1 sesi foto.</li>
-        <li><strong>Tiket Masuk Photobox:</strong> Pengunjung menerima tiket sesi.</li>
-        <li><strong>Pemilihan Template:</strong> Pilih template sebelum sesi dimulai.</li>
-        <li><strong>Pengambilan Foto:</strong> Foto bebas selama durasi tersedia.</li>
-        <li><strong>Review Foto:</strong> Bisa simpan atau hapus.</li>
-        <li><strong>Distribusi:</strong> Digital / Cetak langsung.</li>
-        <li><strong>Properti:</strong> Boleh membawa properti sendiri.</li>
-      </ol>
+    <section id="packages" class="cards">
+      <h2>Paket Pesananan</h2>
+      <div class="card-grid">
+        <article class="card">
+          <h3>Single</h3>
+          <p>1 Sesi (5 Menit) untuk satu orang</p>
+          <div class="price">Rp 7.000</div>
+        </article>
+        <article class="card highlight">
+          <h3>Couple</h3>
+          <p>1 Sesi (5 Menit) maximal 2 orang</p>
+          <div class="price">Rp 15.000</div>
+        </article>
+        <article class="card">
+          <h3>Group</h3>
+          <p>1 Sesi (5 Menit) maximal 4 orang</p>
+          <div class="price">Rp 20.000</div>
+        </article>
+        <article class="card">
+          <h3>Circle</h3>
+          <p>1 Sesi (5 Menit) maximal 7 orang</p>
+          <div class="price">Rp 35.000</div>
+        </article>
+      </div>
     </section>
-
-    <!-- SECTION PEMESANAN -->
-<section id="pemesanan">
-  <h2>Pemesanan Tiket</h2>
-
-  <form id="form-pemesanan" action="#" method="post" autocomplete="off">
-
-    <div class="field">
-      <label for="nama">Nama Lengkap</label>
-      <input type="text" id="nama" name="nama" required>
-    </div>
-
-    <div class="field">
-      <label for="jenis_tiket">Jenis Tiket</label>
-      <select id="jenis_tiket" name="jenis_tiket" required>
-        <option value="single">Single (1 orang)</option>
-        <option value="couple">Couple (2 orang)</option>
-        <option value="cirkel">Cirkel (maks 4 orang)</option>
-        <option value="group">Group (maks 6 orang)</option>
-      </select>
-    </div>
-
-    <div class="button">
-      <button type="submit">Pesan Tiket</button>
-    </div>
-
-  </form>
-</section>
-
   </main>
 
-  <footer>
-    <p>&copy; 2025 FotoBooth School Co. Semua hak dilindungi.</p>
+  <footer class="footer">
+    <div>© 2025 Multimedia SCADA - All rights reserved.</div>
   </footer>
 
+  <!-- Modal booking -->
+  <div id="modal" class="modal" aria-hidden="true">
+    <div class="modal-panel">
+      <button id="modal-close" class="modal-close" aria-label="Close">&times;</button>
+      <h3>Form Booking</h3>
+      <form id="booking-form">
+        <label>Nama pemesan<input name="name" required /></label>
+        <label>Paket
+          <select name="package" required>
+            <option value="Single">Single</option>
+            <option value="Couple">Couple</option>
+            <option value="Group">Group</option>
+            <option value="Circle">Circle</option>
+          </select>
+        </label>
+        <div class="form-actions">
+          <button type="submit" class="btn primary">Konfirmasi</button>
+          <button type="button" id="modal-cancel" class="btn outline">Batal</button>
+        </div>
+      </form>
+      <div id="modal-msg" class="modal-msg" role="status" aria-live="polite"></div>
+    </div>
+  </div>
+
+  <script src="app.js" defer></script>
 </body>
 </html>
