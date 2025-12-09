@@ -38,7 +38,7 @@ html,body{height:100%;margin:0;background:linear-gradient(180deg,#071021 0%,#071
 
 .footer{text-align:center;padding:18px;color:var(--muted)}
 
-.modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:linear-gradient(180deg, rgba(2,6,23,0.6), rgba(2,6,23,0.8));backdrop-filter:blur(6px)}
+.modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:linear-gradient(180deg, rgba(2,6,23,0.6), rgba(2,6,23,0.8));backdrop-filter:blur(6px); z-index: 100;}
 .modal[aria-hidden="false"]{display:flex}
 .modal-panel{width:420px;background:linear-gradient(180deg,#071422,#061126);padding:18px;border-radius:12px;box-shadow:0 30px 50px rgba(2,6,23,0.6);position:relative}
 .modal-close{position:absolute;right:12px;top:8px;background:transparent;color:var(--muted);font-size:22px;border:0}
