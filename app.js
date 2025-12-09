@@ -1,5 +1,3 @@
-// Dynamic behavior: carousel, modal booking, mock availability, localStorage bookings
-
 const images = [
   'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=1200&q=60',
   'https://images.unsplash.com/photo-1506784983877-45594efa4cbe?w=1200&q=60',
