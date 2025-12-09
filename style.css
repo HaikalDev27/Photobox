@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single:wght@100..900&family=Poppins:wght@300;400;500;600;700&display=swap');
 
 body {
   font-family: Arial, sans-serif;
@@ -26,9 +26,9 @@ a:hover {
   color: #A8B5A0;
 }
 
-/* ===========================
-   TOGGLE MENU (Mobile Only)
-   =========================== */
+/* =======================
+   TOGGLE MENU MOBILE
+======================= */
 .nav-toggle {
   display: none;
 }
@@ -62,9 +62,6 @@ a:hover {
   transform: rotate(-45deg) translate(6px, -6px);
 }
 
-/* ===========================
-   NAVBAR MOBILE
-   =========================== */
 nav {
   background-color: #A8B5A0;
   position: fixed;
@@ -105,7 +102,7 @@ nav {
   padding-bottom: 100px;
 }
 
-/* NAV LIST */
+/* NAV STYLE */
 nav ul {
   list-style: none;
   margin: 0;
@@ -126,7 +123,7 @@ nav a:hover {
   color: #000000;
 }
 
-/* HERO SECTION */
+/* HERO */
 .hero {
   text-align: center;
   padding: 3rem 1rem;
@@ -135,11 +132,6 @@ nav a:hover {
 .hero .logo img {
   max-width: 120px;
   border-radius: 6px;
-}
-
-.hero h1 {
-  font-size: 2rem;
-  margin: 1rem 0;
 }
 
 /* BUTTON */
@@ -159,32 +151,22 @@ nav a:hover {
   transform: scale(1.05);
 }
 
-/* CONTENT AREA */
+/* SECTION */
 section {
   padding: 2rem 1rem;
   max-width: 1100px;
   margin: auto;
 }
 
+/* ==========================
+   PEMESANAN FORM
+========================== */
 
-/* ============================
-   FORM WRAPPER
-============================ */
 #pemesanan {
   padding: 40px 20px;
   text-align: center;
 }
 
-#pemesanan h2 {
-  font-size: 1.9rem;
-  margin-bottom: 20px;
-  color: #e5e5e5;
-  letter-spacing: 1px;
-}
-
-/* ============================
-   FORM CONTAINER (Glass Style)
-============================ */
 form {
   max-width: 550px;
   margin: 20px auto;
@@ -196,9 +178,6 @@ form {
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
 }
 
-/* ============================
-   FIELD BLOCK (Lebih Rapi)
-============================ */
 .field {
   display: flex;
   flex-direction: column;
@@ -206,24 +185,20 @@ form {
   margin-bottom: 1.6rem;
 }
 
-/* ============================
-   LABEL
-============================ */
 label {
   font-size: 0.95rem;
   font-weight: 500;
   color: #f1f1f1;
-  letter-spacing: 0.4px;
 }
 
 /* ============================
-   INPUT & SELECT (Tinggi Sama)
+   INPUT & SELECT SAME SIZE
 ============================ */
 input[type="text"],
 select {
   width: 100%;
-  height: 50px;                 /* ⬅ Samakan tinggi */
-  padding: 0 1rem;              /* ⬅ Padding kiri kanan */
+  height: 50px;
+  padding: 0 1rem;
   border: none;
   border-radius: 12px;
   background: rgba(255, 255, 255, 0.15);
@@ -233,33 +208,21 @@ select {
   align-items: center;
   backdrop-filter: blur(4px);
   transition: 0.25s ease;
+  box-sizing: border-box;
 }
 
-/* Hilangkan border default pada select */
+/* PERBAIKAN SELECT BIAR TIDAK LEBIH PENDEK */
 select {
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-
+  padding-right: 40px !important;
   background-image: url("data:image/svg+xml,%3Csvg fill='white' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
-  background-position: right 14px center;
+  background-position: right 12px center !important;
+  background-size: 22px;
 }
 
-/* ============================
-   FOCUS EFFECT
-============================ */
-input:focus,
-select:focus {
-  background: rgba(255, 255, 255, 0.25);
-  box-shadow: 0 0 12px rgba(255, 255, 255, 0.25);
-  transform: translateY(-2px);
-  outline: none;
-}
 
-/* ============================
-   BUTTON (Tetap Modern)
-============================ */
+
+/* BUTTON */
 .button button {
   width: 100%;
   height: 52px;
@@ -279,29 +242,17 @@ select:focus {
   box-shadow: 0 6px 18px rgba(140, 220, 127, 0.35);
 }
 
-.button button:active {
-  transform: translateY(0);
-}
-
-
-/* 
-   RESPONSIVE MOBILE
- */
+/* RESPONSIVE */
 @media (max-width: 768px) {
   .navbar-logo {
     display: none;
   }
-
   .nav-logo-mobile {
     display: block;
   }
 }
 
-/* 
-   RESPONSIVE DESKTOP
-*/
 @media (min-width: 769px) {
-
   nav {
     position: fixed;
     top: 0;
@@ -319,16 +270,8 @@ select:focus {
     padding-left: 2rem;
   }
 
-  .nav-logo-mobile {
-    display: none;
-  }
-
   .nav-toggle-label {
     display: none;
-  }
-
-  .nav-toggle {
-    display: none !important;
   }
 
   body {
@@ -336,7 +279,6 @@ select:focus {
   }
 }
 
-/* FOOTER */
 footer {
   text-align: center;
   background-color: #A8B5A0;
