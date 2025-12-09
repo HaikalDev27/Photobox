@@ -1,14 +1,22 @@
 <!doctype html>
-<html lang="id">
+<html lang="id" prefix="og: https://ogp.me/ns#">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>SNAP — Scada photobooth</title>
   <link rel="stylesheet" href="style.css" />
+  <meta property="og:title" content="SNAP photobooth" />
+  <meta property="og:description" 
+  content="Capture the moment, Create the Story with SNAP photobooth by Multimedia SCADA" />
+  <meta property="og:url" content="https://haikaldev27.github.io/Photobox" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./image/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./image/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./image/favicon/favicon-16x16.png">
+  <link rel="manifest" href="./image/favicon/site.webmanifest">
 </head>
 <body>
 
-  <img src="./image/template (5).png" alt="" class="floating-image1"/>
+  <img src="./image/template (8).png" alt="" class="floating-image1"/>
   <img src="./image/template (6).png" alt="" class="floating-image2"/>
 
   <header class="nav">
@@ -22,7 +30,7 @@
     <section class="hero">
       <div class="hero-left">
         <h1 id="hero-title">Snap by Multimedia Scada</h1>
-        <p class="lead">"Capture the moment, Create the Story".</p>
+        <p class="lead"><strong style="font-size: 16px;">"Capture the moment, Create the Story".</strong> <br> Jam Operational (Senin - Jumat) <br><em>08.00 - 11.30, 12.30 - 15.00</em></p>
         <div class="cta-row">
           <button id="cta-book" class="btn primary">Pesan Sekarang</button>
           <a href="#packages" class="btn outline">Lihat Paket</a>
@@ -71,10 +79,10 @@
     <div class="modal-panel">
       <button id="modal-close" class="modal-close" aria-label="Close">&times;</button>
       <h3>Form Booking</h3>
-      <form id="booking-form">
-        <label>Nama pemesan<input name="name" required /></label>
+      <form method="POST" action="https://docs.google.com/forms/d/e/1FAIpQLScQtjWbDuHTuvK07QUoX7ZEbTTl85TtWEBmDOZmmzhH5f0F1A/form" id="booking-form">
+        <label>Nama pemesan<input name="entry.258979193" required /></label>
         <label>Paket
-          <select name="package" required>
+          <select name="entry.1802039111" required>
             <option value="Single">Single</option>
             <option value="Couple">Couple</option>
             <option value="Group">Group</option>
