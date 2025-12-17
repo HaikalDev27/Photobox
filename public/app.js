@@ -77,6 +77,21 @@ useTemplateBtn.onclick = async () => {
   currentTemplateName.innerText = templateTitles[currentIndex];
   await startCamera();
   startSSE(); 
+  
+  document.addEventListener("keydown", (e)=>{
+    const isSpace = e.code === "Space" || e.key === " " || e.key === "Spacebar";
+    if (!isSpace) return;
+
+    const target = e.target;
+    const tag = target && target.tagName ? target.tagName.toLowerCase() : "";
+    const isEditable = (target && (target.isContentEditable)) || tag === "input" || tag === "textarea" || (target && target.getAttribute && target.getAttribute("role") === "textbox");
+    if (isEditable) return;
+
+    e.preventDefault();
+    if (captureBtn && !captureBtn.disabled) {
+      captureBtn.click();
+    }
+  });
 };
 
 backBtn.onclick = () => {
@@ -242,21 +257,6 @@ captureBtn.onclick = async ()=>{
   previewPopup.classList.remove("hidden");
   captureBtn.disabled = false;
 };
-
-document.addEventListener("keydown", (e)=>{
-  const isSpace = e.code === "Space" || e.key === " " || e.key === "Spacebar";
-  if (!isSpace) return;
-
-  const target = e.target;
-  const tag = target && target.tagName ? target.tagName.toLowerCase() : "";
-  const isEditable = (target && (target.isContentEditable)) || tag === "input" || tag === "textarea" || (target && target.getAttribute && target.getAttribute("role") === "textbox");
-  if (isEditable) return;
-
-  e.preventDefault();
-  if (captureBtn && !captureBtn.disabled) {
-    captureBtn.click();
-  }
-});
 
 saveBtn.onclick = async ()=>{
   try {
